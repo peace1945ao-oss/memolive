@@ -70,6 +70,62 @@
     font-size: var(--text-lg);
 }
 
+/* ===== AI Secretary Card ===== */
+.secretary-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.secretary-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    cursor: pointer;
+    padding: var(--space-lg) var(--space-xl);
+}
+
+.secretary-card:hover {
+    border-color: var(--color-accent-gold);
+    background: var(--color-bg-card-hover);
+}
+
+.secretary-icon {
+    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-glow);
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.secretary-text {
+    flex: 1;
+}
+
+.secretary-text h3 {
+    font-size: var(--text-xl);
+    color: var(--color-accent-gold);
+    margin-bottom: var(--space-xs);
+}
+
+.secretary-text p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.secretary-arrow {
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+}
+
+.secretary-card:hover .secretary-arrow {
+    color: var(--color-accent-gold);
+    transform: translateX(4px);
+}
+
 /* ===== Profiles Grid ===== */
 .profiles-section h2 {
     font-size: var(--text-2xl);

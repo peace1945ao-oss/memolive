@@ -62,6 +62,21 @@ export default function DashboardPage() {
                     <p>大切な人とのつながりを、ここから始めましょう</p>
                 </section>
 
+                {/* AI Secretary */}
+                <section className={styles['secretary-section']}>
+                    <div
+                        className={`${styles['secretary-card']} card animate-fade-in-up`}
+                        onClick={() => router.push('/secretary')}
+                    >
+                        <div className={styles['secretary-icon']}>🎙️</div>
+                        <div className={styles['secretary-text']}>
+                            <h3>AIセクレタリー</h3>
+                            <p>音声で何でも相談できるAIアシスタント</p>
+                        </div>
+                        <span className={styles['secretary-arrow']}>→</span>
+                    </div>
+                </section>
+
                 {/* Profiles */}
                 <section className={styles['profiles-section']}>
                     <h2>🕊️ 想いを繋ぐ人々</h2>
