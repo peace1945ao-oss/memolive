@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>障害者グループホーム事業計画 v7 — 日立市・RC造26室・定員20名(投資家向け提案)</title>
+<style>
+@page { size: 1280px 720px; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --paper: #F7F4EE;
+  --surface: #FFFFFF;
+  --ink: #26251F;
+  --ink2: #57534A;
+  --muted: #8D877B;
+  --hairline: #E3DDD1;
+  --green-deep: #14382E;
+  --green: #1E5C4A;
+  --green-chart: #207A50;
+  --green-pale: #E9F0EA;
+  --gold: #B99B5A;
+  --red: #C43A28;
+  --cream: #F5F1E6;
+}
+html, body { background: #fff; }
+body { font-family: 'Noto Sans JP', 'IPAexGothic', 'IPAGothic', sans-serif; color: var(--ink); }
+.serif { font-family: 'Noto Serif JP', serif; }
+.slide {
+  width: 1280px; height: 720px;
+  position: relative;
+  background: var(--paper);
+  overflow: hidden;
+  page-break-after: always;
+}
+.slide.green { background: var(--green-deep); color: var(--cream); }
+.inner { padding: 56px 72px 0; }
+.kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: .24em;
+  color: var(--gold); display: flex; align-items: center; gap: 12px;
+}
+.kicker::before { content: ""; width: 26px; height: 2px; background: var(--gold); display: inline-block; }
+.title { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 33px; margin-top: 12px; letter-spacing: .01em; }
+.ghost {
+  position: absolute; top: 40px; right: 64px;
+  font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 84px;
+  color: var(--hairline); line-height: 1;
+}
+.lead { font-size: 16.5px; line-height: 1.95; color: var(--ink2); margin-top: 22px; }
+.lead b { color: var(--ink); }
+.sowhat {
+  position: absolute; left: 72px; right: 72px; bottom: 58px;
+  background: var(--green); color: var(--cream);
+  border-radius: 8px; padding: 15px 26px;
+  font-size: 17.5px; font-weight: 700;
+  display: flex; align-items: center; gap: 16px;
+}
+.sowhat .tag { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; white-space: nowrap; }
+.foot {
+  position: absolute; left: 72px; right: 72px; bottom: 22px;
+  display: flex; justify-content: space-between;
+  font-size: 10.5px; color: var(--muted); letter-spacing: .08em;
+  border-top: 1px solid var(--hairline); padding-top: 8px;
+}
+.slide.green .foot { border-top-color: rgba(245,241,230,.2); color: rgba(245,241,230,.55); }
+.cards { display: flex; gap: 18px; }
+.card {
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-top: 3px solid var(--green);
+  padding: 22px 16px 18px; text-align: center; flex: 1; border-radius: 4px;
+}
+.card .num { font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 34px; color: var(--green); white-space: nowrap; }
+.card .num.red { color: var(--red); }
+.card .cap { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+.card.alert { border-top-color: var(--red); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th {
+  text-align: left; font-weight: 700; color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 9px 12px; font-size: 13px; letter-spacing: .04em;
+}
+th.r, td.r { text-align: right; }
+th.c, td.c { text-align: center; }
+td { padding: 9.5px 12px; border-bottom: 1px solid var(--hairline); color: var(--ink2); }
+td:first-child { color: var(--ink); font-weight: 500; }
+tr.total td { border-top: 2px solid var(--ink); border-bottom: none; font-weight: 700; color: var(--ink); }
+.tbl-cap { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+.tbl-cap::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--green); display: inline-block; }
+.tbl-cap.red::before { background: var(--red); }
+.tbl-cap.plain::before { background: var(--gold); }
+.note { font-size: 15px; font-weight: 700; margin-top: 18px; color: var(--ink); }
+.note-s { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+ul.kv { list-style: none; }
+ul.kv li { font-size: 16.5px; line-height: 2.4; color: var(--ink2); }
+ul.kv li b.k { color: var(--green); font-weight: 700; margin-right: 10px; }
+.pillar { background: var(--surface); border: 1px solid var(--hairline); border-radius: 4px; padding: 24px 26px; flex: 1; }
+.pillar .no { font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 30px; color: var(--gold); line-height: 1; }
+.pillar .t { font-size: 18px; font-weight: 700; margin: 12px 0 10px; color: var(--ink); }
+.pillar .b { font-size: 13.5px; line-height: 1.85; color: var(--ink2); }
+.ask {
+  background: var(--surface); border: 1px solid var(--hairline); border-left: 4px solid var(--gold);
+  border-radius: 4px; padding: 14px 24px; font-size: 15.5px; font-weight: 700;
+}
+.ask span { font-weight: 400; font-size: 13.5px; color: var(--ink2); }
+.bignum { font-family: 'Noto Serif JP', serif; font-weight: 900; }
+</style>
+</head>
+<body>
+
+<!-- 1. 表紙 -->
+<section class="slide green">
+  <div style="padding:74px 88px 0;">
+    <div style="display:flex; justify-content:space-between; font-size:12px; letter-spacing:.24em; color:var(--gold); font-weight:700;">
+      <span>投資家向け事業計画書</span><span>2026年7月</span>
+    </div>
+    <div style="margin-top:132px;">
+      <div style="font-size:15px; letter-spacing:.3em; color:rgba(245,241,230,.75);">共同生活援助・介護サービス包括型</div>
+      <div class="serif" style="font-weight:900; font-size:58px; margin-top:22px; letter-spacing:.02em;">障害者グループホーム事業</div>
+      <div style="width:64px; height:3px; background:var(--gold); margin-top:36px;"></div>
+      <div style="margin-top:34px; font-size:17px; color:rgba(245,241,230,.85); letter-spacing:.12em;">
+        定員20名 ／ RC造1棟(全26室) ／ 日立市(茨城県)
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>CONFIDENTIAL — 本資料は検討目的に限り提供されます</span><span>01 — 25</span></div>
+</section>
+
+<!-- 2. 投資ハイライト -->
+<section class="slide">
+  <div class="ghost">02</div>
+  <div class="inner">
+    <div class="kicker">OVERVIEW ─ 投資ハイライト</div>
+    <div class="title">供給不足の市場に、安全性で差別化して参入する</div>
+    <div class="lead" style="margin-top:14px; font-size:15px; line-height:1.8;">
+      茨城県日立市において障害者グループホーム(共同生活援助・介護サービス包括型)を開設・運営する。RC造3階建て1棟・全26室。<br>
+      うち居室20室(全室個室)・定員20名とし、残る6室は共用スペース5室+スタッフルーム1室(夜勤5名待機可)に充てる。
+    </div>
+    <div class="cards" style="margin-top:22px;">
+      <div class="card"><div class="num">20<span style="font-size:20px;">名</span></div><div class="cap">定員(全室個室・居室20室)</div></div>
+      <div class="card"><div class="num">3.4<span style="font-size:20px;">億円</span></div><div class="cap">必要初期費用(概算)</div></div>
+      <div class="card"><div class="num">487<span style="font-size:20px;">万円</span></div><div class="cap">月間売上(満室時)</div></div>
+      <div class="card"><div class="num">117<span style="font-size:20px;">万円</span></div><div class="cap">月間利益(利益率24.0%)</div></div>
+    </div>
+    <div class="cards" style="margin-top:16px; padding:0 130px;">
+      <div class="card"><div class="num">75<span style="font-size:20px;">%</span></div><div class="cap">損益分岐(15人/20人)</div></div>
+      <div class="card"><div class="num">約18<span style="font-size:20px;">年</span></div><div class="cap">投資回収(満室維持時)</div></div>
+      <div class="card"><div class="num">112<span style="font-size:20px;">%</span></div><div class="cap">GH需要達成率(供給不足)</div></div>
+    </div>
+    <div class="ask" style="margin-top:18px;">
+      本提案:必要初期費用 約3.4億円(建設関連・開業 2億4,770万円+運転資金 9,000万円)の資金計画
+      <span>─ 調達スキーム(出資・金融機関借入・公的融資の組合せ)は協議の上決定</span>
+    </div>
+  </div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>02 — 25</span></div>
+</section>
+
+<!-- 3. 26万人 -->
+<section class="slide">
+  <div class="ghost">03</div>
+  <div class="inner">
+    <div class="kicker">ISSUE ─ 社会課題</div>
+    <div class="title">26万人の精神科入院患者</div>
+    <div class="lead">
+      日本には約26万人の精神科入院患者がいる。その入院費用は1人あたり月額約44万円。<br>
+      年間で約1.4兆円の医療費が投入されており、この公費負担は高齢化と精神障害者の増加により今後さらに膨らむ。
+    </div>
+    <div class="cards" style="margin-top:44px; padding:0 40px;">
+      <div class="card alert" style="padding:38px 16px 30px;"><div class="num red" style="font-size:44px;">約26万人</div><div class="cap" style="margin-top:16px;">精神科入院患者数</div></div>
+      <div class="card alert" style="padding:38px 16px 30px;"><div class="num red" style="font-size:44px;">月44万円</div><div class="cap" style="margin-top:16px;">入院1人あたり月額費用</div></div>
+      <div class="card alert" style="padding:38px 16px 30px;"><div class="num red" style="font-size:44px;">1.4兆円/年</div><div class="cap" style="margin-top:16px;">精神科医療費(推計)</div></div>
+    </div>
+    <div class="note-s" style="margin-top:20px;">出典:厚生労働省「患者調査」、日本精神科病院協会データ</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>公費負担が増え続ける。構造的な解決策が必要</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>03 — 25</span></div>
+</section>
+
+<!-- 4. 18万人 -->
+<section class="slide">
+  <div class="ghost">04</div>
+  <div class="inner">
+    <div class="kicker">ISSUE ─ 社会課題</div>
+    <div class="title">18万人が退院できない</div>
+    <div class="lead">
+      26万人のうち約18万人は「社会的入院」と呼ばれる状態にある。医学的には退院可能だが、<br>
+      退院後に住む場所がないため入院を継続している。住居さえあれば地域で暮らせる人々が病院に留め置かれている。
+    </div>
+    <div style="padding:0 200px; margin-top:44px;">
+      <div class="card alert" style="padding:44px 16px 34px;"><div class="num red" style="font-size:54px;">約18万人</div><div class="cap" style="margin-top:16px;">社会的入院(退院可能だが退院先がない)</div></div>
+    </div>
+    <div class="note" style="margin-top:28px; font-size:19px; text-align:center;" >
+      <span class="serif">「住む場所があれば、今すぐ退院できる」──</span> これが18万人の現実
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>住む場所があれば今すぐ動ける。GHはその受け皿</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>04 — 25</span></div>
+</section>
+
+<!-- 5. 入院 vs GH -->
+<section class="slide">
+  <div class="ghost">05</div>
+  <div class="inner">
+    <div class="kicker">ISSUE ─ 社会課題</div>
+    <div class="title">入院 月44万円 vs GH 月18万円</div>
+    <div class="lead">
+      統合失調症の入院費:1日14,640円 × 30日 = 月額約44万円。グループホームの公費負担:月額約18万円。<br>
+      差額は月26万円 × 12ヶ月 = <b>年間309万円/人の公費削減</b>。
+    </div>
+    <div style="display:flex; align-items:center; gap:28px; margin-top:40px; padding:0 80px;">
+      <div class="card alert" style="flex:1; padding:40px 16px 30px;"><div class="num red" style="font-size:46px;">月44万円</div><div class="cap" style="margin-top:16px;">入院(精神科病院)</div></div>
+      <div class="serif" style="font-size:46px; color:var(--green); font-weight:900;">→</div>
+      <div class="card" style="flex:1; padding:40px 16px 30px;"><div class="num" style="font-size:46px;">月18万円</div><div class="cap" style="margin-top:16px;">GH(地域生活)</div></div>
+    </div>
+    <div class="note" style="margin-top:30px; font-size:17px;">1人が退院してGHに移行するだけで、年間309万円の公費が浮く。</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>1人移行で年309万円の公費削減。20名で年6,200万円</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>05 — 25</span></div>
+</section>
+
+<!-- 6. 政策 -->
+<section class="slide">
+  <div class="ghost">06</div>
+  <div class="inner">
+    <div class="kicker">POLICY ─ 政策環境</div>
+    <div class="title">国の「入院から地域へ」政策</div>
+    <ul class="kv" style="margin-top:30px;">
+      <li><b class="k">法改正</b>精神保健福祉法改正(2024):退院支援の義務化・地域移行の促進</li>
+      <li><b class="k">整備目標</b>第7期障害福祉計画:GH整備を数値目標で明記</li>
+      <li><b class="k">日立市</b>「新規参入の促進」を計画に明記</li>
+      <li><b class="k">報酬改定</b>地域移行支援の加算を段階的に引き上げ</li>
+      <li><b class="k">自治体責務</b>退院後の住居確保・支援体制の整備を義務付け</li>
+    </ul>
+    <div class="note" style="margin-top:36px; font-size:17px; line-height:1.9;">
+      政策の方向性とビジネスの方向性が完全に一致している。<br>行政が「やってほしい」と言っている事業を行う。
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>政策追い風で行政が協力的。逆風になるリスクが低い</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>06 — 25</span></div>
+</section>
+
+<!-- 7. GHとは -->
+<section class="slide">
+  <div class="ghost">07</div>
+  <div class="inner">
+    <div class="kicker">SERVICE ─ 事業概要</div>
+    <div class="title">グループホームとは</div>
+    <div class="lead" style="margin-top:16px;">
+      障害者グループホーム(共同生活援助)は、障害のある方が地域の中で共同生活を営む住居。<br>
+      「介護サービス包括型」は食事・入浴・排泄等の介護を事業所内のスタッフが直接提供する。
+    </div>
+    <div style="display:flex; gap:40px; margin-top:26px;">
+      <ul class="kv" style="flex:1;">
+        <li><b class="k">居住支援</b>個室(鍵付き)+共用リビング・浴室</li>
+        <li><b class="k">生活支援</b>食事提供・服薬管理・金銭管理支援</li>
+        <li><b class="k">日中活動</b>就労準備・日中活動の送り出し</li>
+        <li><b class="k">相談支援</b>生活全般の相談・退院後の地域定着</li>
+        <li><b class="k">夜間支援</b>夜勤スタッフ常駐(最大5名/晩)の24時間体制</li>
+      </ul>
+    </div>
+    <div class="note serif" style="margin-top:22px; font-size:17px; color:var(--green);">「ホテルのようにきれいに。施設っぽくしない。自立を目指す家」</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>利用者に何を提供するかが分かる</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>07 — 25</span></div>
+</section>
+
+<!-- 8. 日立障害福祉圏 -->
+<section class="slide">
+  <div class="ghost">08</div>
+  <div class="inner">
+    <div class="kicker">MARKET ─ 市場環境</div>
+    <div class="title">日立障害福祉圏 ── 6病院・1,303床</div>
+    <div class="lead" style="margin-top:14px;">
+      日立障害福祉圏は日立市・高萩市・北茨城市の3市で構成。圏域内に精神科病院6院・合計1,303床が存在する。<b>全院を営業訪問済み。</b>
+    </div>
+    <div style="margin-top:30px;">
+      <table>
+        <tr><th>市</th><th class="r">人口(R5)</th><th class="r">障害者数</th><th class="r">GH利用者(R5)</th></tr>
+        <tr><td>日立市</td><td class="r">167,501人</td><td class="r">12,944人(7.73%)</td><td class="r">339人</td></tr>
+        <tr><td>高萩市</td><td class="r">約25,000人</td><td class="r">約1,508人</td><td class="r">52人</td></tr>
+        <tr><td>北茨城市</td><td class="r">約39,000人</td><td class="r">—</td><td class="r">60人</td></tr>
+      </table>
+    </div>
+    <div class="note" style="margin-top:24px;">日立市の障害者構成比7.73%は県平均4.9%を大幅に上回る</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>参入ルートは既に確立されている(全院訪問済み)</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>08 — 25</span></div>
+</section>
+
+<!-- 9. 需要分析 -->
+<section class="slide">
+  <div class="ghost">09</div>
+  <div class="inner">
+    <div class="kicker">MARKET ─ 市場環境</div>
+    <div class="title">需要分析 ── 実績が見込みを常に上回る</div>
+    <div class="lead" style="margin-top:12px; font-size:15px;">
+      日立市のGH需給は実績が見込量を一貫して上回る(平均達成率112%)。市は「利用希望者も大幅に増加しており、更なるサービス提供体制の整備が必要」と明記。
+    </div>
+    <div style="display:flex; gap:40px; margin-top:24px;">
+      <div style="flex:1;">
+        <table style="font-size:13px;">
+          <tr><th>手帳等区分</th><th class="r">H30年度</th><th class="r">R5年度</th><th class="r">増減率</th></tr>
+          <tr><td>身体障害者手帳</td><td class="r">5,599</td><td class="r">5,894</td><td class="r">+5.3%</td></tr>
+          <tr><td>療育手帳</td><td class="r">1,534</td><td class="r">1,706</td><td class="r">+11.2%</td></tr>
+          <tr><td>精神障害者手帳</td><td class="r">1,136</td><td class="r">1,564</td><td class="r" style="color:var(--red); font-weight:700;">+37.7%</td></tr>
+          <tr><td>精神通院医療</td><td class="r">2,613</td><td class="r">2,998</td><td class="r">+14.7%</td></tr>
+          <tr class="total"><td>合計</td><td class="r">11,654</td><td class="r">12,944</td><td class="r">+11.1%</td></tr>
+        </table>
+      </div>
+      <div style="flex:1;">
+        <table style="font-size:13px;">
+          <tr><th>年度</th><th class="r">見込量</th><th class="r">実績</th><th class="r">達成率</th></tr>
+          <tr><td>R3</td><td class="r">264人</td><td class="r">302人</td><td class="r">114.4%</td></tr>
+          <tr><td>R4</td><td class="r">286人</td><td class="r">320人</td><td class="r">111.9%</td></tr>
+          <tr><td>R5</td><td class="r">308人</td><td class="r">339人</td><td class="r">110.1%</td></tr>
+          <tr><td>R8見込</td><td class="r">454人</td><td class="r">—</td><td class="r">—</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="note" style="margin-top:20px; font-size:14px;">精神障害+37.7%の急増。R8見込454人はR5実績比+115人の増加余地 ── 当施設20名はその17%に過ぎない</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>空室リスクは構造的に低い。需要が供給を常に上回る</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>09 — 25</span></div>
+</section>
+
+<!-- 10. 差別化戦略 -->
+<section class="slide">
+  <div class="ghost">10</div>
+  <div class="inner">
+    <div class="kicker">STRATEGY ─ 差別化戦略</div>
+    <div class="title">なぜRC造 × 夜勤最大5名か</div>
+    <div class="lead" style="margin-top:12px; font-size:15px;">
+      初期費用と夜間人件費を「あえて」厚くする設計。紹介元(病院・相談支援)が最も重視する「夜間の安全」と「受入力」に応えることで、紹介が集まる構造をつくる。
+    </div>
+    <div style="display:flex; gap:20px; margin-top:24px;">
+      <div class="pillar">
+        <div class="no">01</div>
+        <div class="t">耐火・耐震のRC造</div>
+        <div class="b">夜間火災・災害リスクに構造で対応。スプリンクラー・自火報に耐火構造を重ね、6項ロ基準を上回る安全水準。法定耐用47年の長期資産。</div>
+      </div>
+      <div class="pillar">
+        <div class="no">02</div>
+        <div class="t">夜勤 最大5名/晩</div>
+        <div class="b">基本3名・支援度に応じ最大5名まで増強できる体制。増強時は夜間支援等体制加算の区分も上がり収支影響は限定的。病院が安心して紹介できる退院先となる。</div>
+      </div>
+      <div class="pillar">
+        <div class="no">03</div>
+        <div class="t">全室個室・ホテル品質</div>
+        <div class="b">鍵付き完全個室20室。家賃3万円/月と障害基礎年金の範囲で入居できる負担設定。「施設っぽくしない」住環境で選ばれ、長期入居につながる。</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:20px; font-size:14px;">安全と受入力の差別化は、「空室リスクの低減」と「夜間支援等体制加算の確実な算定」として財務に還元される</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>コスト増は戦略。紹介が集まり、稼働と単価で回収する</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>10 — 25</span></div>
+</section>
+
+<!-- 11. 支援ネットワーク -->
+<section class="slide">
+  <div class="ghost">11</div>
+  <div class="inner">
+    <div class="kicker">EXECUTION ─ 実行体制</div>
+    <div class="title">支援ネットワーク</div>
+    <div class="lead" style="margin-top:14px;">この事業は単独で始めるのではない。既に構築済みの支援ネットワークがある。</div>
+    <ul class="kv" style="margin-top:26px;">
+      <li><b class="k">医療</b>圏域6病院を全院営業訪問済み。退院候補者の紹介ルート確立</li>
+      <li><b class="k">相談支援</b>スペース空・いわき相談支援事業所と連携。入居候補者の直接紹介</li>
+      <li><b class="k">行政</b>日立市障害福祉課との関係構築。市計画に「新規参入促進」明記</li>
+      <li><b class="k">前計画実績</b>前計画期間中に6事業所が新規参入。行政の支援実績あり</li>
+      <li><b class="k">地域</b>日立市は障害者構成比7.73%(県平均4.9%超)で高い社会的関心</li>
+    </ul>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>今すぐ動けるチームがある。ゼロからの立ち上げではない</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>11 — 25</span></div>
+</section>
+
+<!-- 12. スケジュール -->
+<section class="slide">
+  <div class="ghost">12</div>
+  <div class="inner">
+    <div class="kicker">EXECUTION ─ 実行体制</div>
+    <div class="title">開設スケジュールと認可プロセス</div>
+    <div class="lead" style="margin-top:10px; font-size:14.5px;">
+      GHの開設には茨城県の指定が必要。日立市が「新規参入の促進」を計画に明記しており、事前相談は実施済み。<b>2026年内の着工、2028年1月のPhase 1受入開始を目標</b>とする。
+    </div>
+    <div style="margin-top:18px;">
+      <table style="font-size:13px;">
+        <tr><th style="width:230px;">時期</th><th>マイルストーン</th></tr>
+        <tr><td>2026年 7〜8月</td><td>土地確定・実施設計(基本設計と並行して短縮)・日立市事前協議(実施済み)</td></tr>
+        <tr><td>2026年 9〜10月</td><td>建築確認申請・消防法6項ロ対応協議・茨城県への指定事前協議</td></tr>
+        <tr><td><b>2026年 11〜12月</b></td><td><b>着工</b>(2026年内・RC造3階建て・工期約11ヶ月)</td></tr>
+        <tr><td>2027年 10〜11月</td><td>竣工・消防検査</td></tr>
+        <tr><td>2027年 12月〜2028年 1月</td><td>県指定取得・職員採用/研修・内覧会</td></tr>
+        <tr><td><b>2028年 1月</b></td><td><b>Phase 1 受入開始(10名)</b>→ 以後ユニット単位で段階受入</td></tr>
+      </table>
+    </div>
+    <div class="note-s">※2026年内着工は土地の早期確定と設計・審査の並行進行が前提。確定時期により1〜3ヶ月前後する可能性がある</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>開設までの道筋が時系列で明確。不確定要素は少ない</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>12 — 25</span></div>
+</section>
+
+<!-- 13. 施設計画 -->
+<section class="slide">
+  <div class="ghost">13</div>
+  <div class="inner">
+    <div class="kicker">FACILITY ─ 施設計画</div>
+    <div class="title">RC造3階建て1棟・全26室</div>
+    <div class="lead" style="margin-top:10px; font-size:14px; line-height:1.75;">
+      居室20室(全室個室)を共同生活住居2ユニット(10名・10名)で構成し、1住居あたり定員10名以下の基準に適合。<br>
+      残る6室は共用スペース5室とスタッフルーム1室に充て、20名分の調理に対応する大型キッチンを備える。延床面積:約700㎡。
+    </div>
+    <div style="display:flex; gap:36px; margin-top:18px;">
+      <div style="flex:1.25;">
+        <table style="font-size:12.5px;">
+          <tr><th>設備</th><th>仕様</th></tr>
+          <tr><td>居室 20室</td><td>各6畳・鍵付き完全個室・ベッド・エアコン</td></tr>
+          <tr><td>ユニット</td><td>2住居(10名/10名・1〜2階)</td></tr>
+          <tr><td>共用スペース 5室</td><td>リビング・ダイニング・相談・多目的等</td></tr>
+          <tr><td>スタッフルーム 1室</td><td>夜勤最大5名が同時待機できる広さ(仮眠対応)</td></tr>
+          <tr><td>キッチン</td><td>20名分の調理に対応する大型キッチン</td></tr>
+          <tr><td>浴室・トイレ</td><td>ユニットバス×各階・洋式温水洗浄便座(各階複数)</td></tr>
+          <tr><td>構造</td><td>RC造・耐火構造(法定耐用年数47年)</td></tr>
+          <tr><td>面積</td><td>延床約700㎡(約35㎡/人)</td></tr>
+          <tr><td>家賃設定</td><td>3万円/月(補足給付対象・年金内で入居可能)</td></tr>
+        </table>
+      </div>
+      <div style="flex:1;">
+        <table style="font-size:12.5px;">
+          <tr><th>消防設備(6項ロ)</th><th class="r">1棟合計</th></tr>
+          <tr><td>スプリンクラー(水道連結型)</td><td class="r">600万円</td></tr>
+          <tr><td>自動火災報知設備</td><td class="r">200万円</td></tr>
+          <tr><td>その他+予備費</td><td class="r">200万円</td></tr>
+          <tr class="total"><td>消防設備 合計</td><td class="r">1,000万円</td></tr>
+        </table>
+        <div class="note serif" style="margin-top:24px; font-size:15px; color:var(--green); line-height:1.9;">「ホテルのようにきれいに。<br>施設っぽくしない。自立を目指す家」</div>
+      </div>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>何をどこに建てるか仕様が明確。RC造で夜間の防火安全性も強化</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>13 — 25</span></div>
+</section>
+
+<!-- 14. 人員体制 -->
+<section class="slide">
+  <div class="ghost">14</div>
+  <div class="inner">
+    <div class="kicker">TEAM ─ 人員体制</div>
+    <div class="title">常勤6名+パート2名+夜勤最大5名</div>
+    <div class="lead" style="margin-top:10px; font-size:14.5px;">
+      介護サービス包括型の人員基準を満たす体制。地域賃金水準に合わせた給与設定で人材確保の差別化を図る。<br>
+      夜間は基本3名/晩(利用者概ね6〜7名につき1名)、支援度に応じて最大5名/晩まで増強できる体制とする。
+    </div>
+    <div style="margin-top:18px;">
+      <table style="font-size:13px;">
+        <tr><th>職種</th><th class="r">人数</th><th class="r">形態</th><th class="r">月給</th><th class="r">資格</th></tr>
+        <tr><td>管理者兼サビ管</td><td class="r">1名</td><td class="r">常勤</td><td class="r">300,000円</td><td class="r">実務経験5年</td></tr>
+        <tr><td>世話人</td><td class="r">3名</td><td class="r">常勤</td><td class="r">200,000円</td><td class="r">不要</td></tr>
+        <tr><td>世話人</td><td class="r">1名</td><td class="r">パート</td><td class="r">100,000円</td><td class="r">不要</td></tr>
+        <tr><td>生活支援員</td><td class="r">2名</td><td class="r">常勤</td><td class="r">210,000円</td><td class="r">不要</td></tr>
+        <tr><td>夜勤スタッフ</td><td class="r">基本3名・最大5名/晩(ローテ)</td><td class="r">パート</td><td class="r">15,000円/回</td><td class="r">不要</td></tr>
+        <tr><td>事務員</td><td class="r">1名</td><td class="r">パート</td><td class="r">100,000円</td><td class="r">不要</td></tr>
+      </table>
+    </div>
+    <div class="note" style="margin-top:16px;">人件費合計:月額2,870,000円(満室時・月間支出の77.6%)
+      <span style="font-weight:400; font-size:12px; color:var(--muted);">　※夜勤は基本3名/晩×15,000円×30日=1,350,000円</span>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>支援の質が人員体制で担保される。夜間も手厚い配置</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>14 — 25</span></div>
+</section>
+
+<!-- 15. 月次収支 -->
+<section class="slide">
+  <div class="ghost">15</div>
+  <div class="inner">
+    <div class="kicker">FINANCIALS ─ 財務計画</div>
+    <div class="title">月次収支計画(満室時)</div>
+    <div style="display:flex; gap:36px; margin-top:20px;">
+      <div style="flex:1;">
+        <div class="tbl-cap">収入</div>
+        <table style="font-size:12.5px;">
+          <tr><th>区分</th><th class="r">月額</th></tr>
+          <tr><td>基本報酬(区分2+3)</td><td class="r">1,521,000円</td></tr>
+          <tr><td>夜間支援等体制加算 ※</td><td class="r">1,500,000円</td></tr>
+          <tr><td>処遇改善加算等</td><td class="r">350,000円</td></tr>
+          <tr><td>実費(家賃3万+食費3万+光熱水費1.5万)</td><td class="r">1,500,000円</td></tr>
+          <tr class="total"><td>月間収入 合計</td><td class="r">4,871,000円</td></tr>
+        </table>
+      </div>
+      <div style="flex:1;">
+        <div class="tbl-cap red">支出</div>
+        <table style="font-size:12.5px;">
+          <tr><th>区分</th><th class="r">月額</th></tr>
+          <tr><td>人件費(日中:常勤6+パート2)</td><td class="r">1,520,000円</td></tr>
+          <tr><td>夜勤人件費(基本3名/晩×15,000円×30日)</td><td class="r">1,350,000円</td></tr>
+          <tr><td>施設維持費(RC造1棟)</td><td class="r">250,000円</td></tr>
+          <tr><td>運営費</td><td class="r">580,000円</td></tr>
+          <tr class="total"><td>月間支出 合計</td><td class="r">3,700,000円</td></tr>
+        </table>
+      </div>
+    </div>
+    <div style="display:flex; gap:36px; margin-top:22px;">
+      <div style="flex:1;">
+        <div class="tbl-cap plain">損益</div>
+        <table style="font-size:12.5px;">
+          <tr><td>月間利益</td><td class="r"><b>1,171,000円</b></td></tr>
+          <tr><td>年間利益</td><td class="r">14,052,000円</td></tr>
+          <tr><td>利益率</td><td class="r">24.0%</td></tr>
+        </table>
+      </div>
+      <div style="flex:1; padding-top:6px;">
+        <div style="font-size:13.5px; font-weight:700; line-height:1.9;">実費収入が月間収入の30.8%を占め、報酬改定リスクへのバッファとなる。家賃3万円は障害基礎年金の範囲で支払える水準(補足給付1万円の対象)。</div>
+        <div class="note-s">※夜間支援等体制加算は夜勤3〜5名運用を想定した保守的概算。前提と感度分析は次頁参照</div>
+      </div>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>月収487万・月利益117万。財務の中身が透明</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>15 — 25</span></div>
+</section>
+
+<!-- 16. 前提と感度分析 -->
+<section class="slide">
+  <div class="ghost">16</div>
+  <div class="inner">
+    <div class="kicker">FINANCIALS ─ 財務計画</div>
+    <div class="title">収支の前提条件と感度分析</div>
+    <div class="lead" style="margin-top:10px; font-size:14.5px;">
+      収支計画の主要前提を明示し、前提が崩れた場合の耐性を検証。最大の変動要因は夜間支援等体制加算と稼働率。
+    </div>
+    <div style="display:flex; gap:36px; margin-top:20px;">
+      <div style="flex:1;">
+        <div class="tbl-cap">主要前提</div>
+        <table style="font-size:12px;">
+          <tr><th>項目</th><th class="r">前提</th></tr>
+          <tr><td>基本報酬</td><td class="r">障害支援区分2〜3中心・76,050円/人月</td></tr>
+          <tr><td>夜間支援等体制加算</td><td class="r">夜勤3〜5名運用・告示単位の約7割で概算</td></tr>
+          <tr><td>処遇改善加算等</td><td class="r">35万円/月</td></tr>
+          <tr><td>実費収入</td><td class="r">家賃3万+食費3万+光熱水費1.5万=7.5万円/人月</td></tr>
+          <tr><td>夜勤単価</td><td class="r">15,000円/回(地域相場)</td></tr>
+          <tr><td>稼働</td><td class="r">開設後約18ヶ月で満室(段階受入)</td></tr>
+        </table>
+      </div>
+      <div style="flex:1.2;">
+        <div class="tbl-cap red">感度分析</div>
+        <table style="font-size:12px;">
+          <tr><th>前提の変動</th><th class="r">影響</th><th class="r">評価</th></tr>
+          <tr><td>夜間加算 ▲30%</td><td class="r">月間利益 117万 → 72万円</td><td class="r">BEP 75%→85%。黒字維持</td></tr>
+          <tr><td>夜勤5名/晩で常時運用</td><td class="r">夜勤費 +90万円/月</td><td class="r">加算区分の上昇で概ね相殺</td></tr>
+          <tr><td>稼働率90%で定常</td><td class="r">年間利益 896万円</td><td class="r">回収約28年に長期化</td></tr>
+          <tr><td>建築費 +10%</td><td class="r">初期費用 +1,950万円</td><td class="r">回収期間 +約1.5年</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="note" style="margin-top:18px; font-size:14px;">加算の算定区分は指定申請時に確定するため、確定後に本計画の数値を更新する</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>主要前提を開示。単一の前提が崩れても赤字転落しない構造</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>16 — 25</span></div>
+</section>
+
+<!-- 17. 損益分岐(チャート) -->
+<section class="slide">
+  <div class="ghost">17</div>
+  <div class="inner">
+    <div class="kicker">FINANCIALS ─ 財務計画</div>
+    <div class="title">損益分岐 ── 稼働率75%で黒字</div>
+    <div style="display:flex; gap:40px; margin-top:14px;">
+      <div style="flex:1.15;">
+        <div style="font-size:13px; color:var(--ink2); margin-bottom:4px;">稼働率別の月間損益(夜勤3名運用時)</div>
+        <svg width="660" height="392" viewBox="0 0 660 392" role="img" aria-label="稼働率別の月間損益: 100%で+117万円、75%で損益分岐、70%で▲10万円">
+          <!-- gridlines -->
+          <line x1="70" y1="191" x2="640" y2="191" stroke="#E3DDD1" stroke-width="1"/>
+          <line x1="70" y1="106" x2="640" y2="106" stroke="#E3DDD1" stroke-width="1"/>
+          <line x1="70" y1="20"  x2="640" y2="20"  stroke="#E3DDD1" stroke-width="1"/>
+          <text x="62" y="195" text-anchor="end" font-size="11" fill="#8D877B">+40万</text>
+          <text x="62" y="110" text-anchor="end" font-size="11" fill="#8D877B">+80万</text>
+          <text x="62" y="24"  text-anchor="end" font-size="11" fill="#8D877B">+120万</text>
+          <!-- bars (positive: rounded top; negative: rounded bottom) -->
+          <rect x="99"  y="26"  width="56" height="251" rx="4" fill="#207A50"/><rect x="99" y="271" width="56" height="6" fill="#207A50"/>
+          <rect x="213" y="117" width="56" height="160" rx="4" fill="#207A50"/><rect x="213" y="271" width="56" height="6" fill="#207A50"/>
+          <rect x="327" y="208" width="56" height="69"  rx="4" fill="#207A50"/><rect x="327" y="271" width="56" height="6" fill="#207A50"/>
+          <rect x="441" y="274" width="56" height="3"   fill="#B99B5A"/>
+          <rect x="555" y="277" width="56" height="22"  rx="4" fill="#C43A28"/><rect x="555" y="277" width="56" height="6" fill="#C43A28"/>
+          <!-- zero axis -->
+          <line x1="70" y1="277" x2="640" y2="277" stroke="#26251F" stroke-width="1.5"/>
+          <text x="62" y="281" text-anchor="end" font-size="11" fill="#8D877B">0</text>
+          <!-- value labels -->
+          <text x="127" y="16"  text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+117万</text>
+          <text x="241" y="107" text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+75万</text>
+          <text x="355" y="198" text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+32万</text>
+          <text x="469" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="#B99B5A">±0 (BEP)</text>
+          <text x="583" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#C43A28">▲10万</text>
+          <!-- category labels -->
+          <text x="127" y="336" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">100%</text>
+          <text x="127" y="352" text-anchor="middle" font-size="11" fill="#8D877B">20人</text>
+          <text x="241" y="336" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">90%</text>
+          <text x="241" y="352" text-anchor="middle" font-size="11" fill="#8D877B">18人</text>
+          <text x="355" y="336" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">80%</text>
+          <text x="355" y="352" text-anchor="middle" font-size="11" fill="#8D877B">16人</text>
+          <text x="469" y="336" text-anchor="middle" font-size="12.5" fill="#B99B5A" font-weight="700">75%</text>
+          <text x="469" y="352" text-anchor="middle" font-size="11" fill="#8D877B">15人・BEP</text>
+          <text x="583" y="336" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">70%</text>
+          <text x="583" y="352" text-anchor="middle" font-size="11" fill="#8D877B">14人</text>
+        </svg>
+      </div>
+      <div style="flex:1;">
+        <div class="tbl-cap plain">投資回収シナリオ</div>
+        <div style="font-size:11.5px; color:var(--muted); margin-bottom:8px;">回収対象:建設関連+開業費用 = 2億4,770万円</div>
+        <table style="font-size:12.5px;">
+          <tr><th>シナリオ</th><th class="r">稼働率</th><th class="r">年間利益</th><th class="r">回収期間</th></tr>
+          <tr><td>楽観</td><td class="r">100%</td><td class="r">1,405万円</td><td class="r">約18年</td></tr>
+          <tr><td>標準</td><td class="r">95%(19人)</td><td class="r">1,151万円</td><td class="r">約21年</td></tr>
+          <tr><td>保守的</td><td class="r">90%(18人)</td><td class="r">896万円</td><td class="r">約28年</td></tr>
+        </table>
+        <div style="font-size:12.5px; color:var(--ink2); line-height:1.85; margin-top:16px;">
+          回収期間は事業利益ベース。土地・RC造建物(取得原価ベース約2.3億円・法定耐用47年)の<b style="color:var(--ink);">資産価値は別途残存</b>。<br>
+          運転資金2年分(9,000万円)で立ち上げ期の安全網を確保。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>満室でなくても成立する。資産が残る投資構造</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>17 — 25</span></div>
+</section>
+
+<!-- 18. 段階開設 -->
+<section class="slide">
+  <div class="ghost">18</div>
+  <div class="inner">
+    <div class="kicker">FINANCIALS ─ 財務計画</div>
+    <div class="title">段階開設モデル ── Phase 1 → 2</div>
+    <div class="lead" style="margin-top:12px; font-size:15px;">
+      建物はRC造1棟のため一括建設とし、受入をユニット(階)単位で段階化する。<br>
+      人員・夜勤体制を稼働に合わせて立ち上げ、運営リスクを逓減する。
+    </div>
+    <div style="margin-top:22px;">
+      <table style="font-size:13.5px;">
+        <tr><th>Phase</th><th class="r">受入ユニット</th><th class="r">累計定員</th><th class="r">夜勤配置</th><th class="r">月間収入(概算)</th></tr>
+        <tr><td>Phase 1</td><td class="r">1階ユニット(10名)</td><td class="r">10人</td><td class="r">2名/晩</td><td class="r">約261万円</td></tr>
+        <tr><td>Phase 2</td><td class="r">+2階ユニット(10名)</td><td class="r">20人</td><td class="r">3名/晩(最大5名)</td><td class="r">約487万円</td></tr>
+      </table>
+    </div>
+    <div class="note" style="margin-top:22px; font-size:14.5px; line-height:2.0;">
+      ＋ 運転資金9,000万円(BEP到達まで2年分)を別途確保<br>
+      Phase 1で運営実績・入居パイプラインを確認した上で、Phase 2の受入を拡大する
+    </div>
+    <div class="note-s">※建設投資は一括となるため、圏域6病院との連携による入居予約で稼働立ち上げリスクを抑制する</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>受入と人員配置の段階化で運営リスクが逓減する</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>18 — 25</span></div>
+</section>
+
+<!-- 19. 5年収支(チャート) -->
+<section class="slide">
+  <div class="ghost">19</div>
+  <div class="inner">
+    <div class="kicker">FINANCIALS ─ 財務計画</div>
+    <div class="title">開設後5年の収支見通し</div>
+    <div style="display:flex; gap:44px; margin-top:14px;">
+      <div style="flex:1.2;">
+        <div style="font-size:13px; color:var(--ink2); margin-bottom:4px;">年間損益の推移(概算・万円)</div>
+        <svg width="660" height="392" viewBox="0 0 660 392" role="img" aria-label="開設後5年の年間損益: 1年目▲380万円、2年目+390万円で黒字化、5年目+1,150〜1,400万円">
+          <!-- gridlines -->
+          <line x1="70" y1="170" x2="640" y2="170" stroke="#E3DDD1" stroke-width="1"/>
+          <line x1="70" y1="95"  x2="640" y2="95"  stroke="#E3DDD1" stroke-width="1"/>
+          <line x1="70" y1="20"  x2="640" y2="20"  stroke="#E3DDD1" stroke-width="1"/>
+          <text x="62" y="174" text-anchor="end" font-size="11" fill="#8D877B">+500万</text>
+          <text x="62" y="99"  text-anchor="end" font-size="11" fill="#8D877B">+1,000万</text>
+          <text x="62" y="24"  text-anchor="end" font-size="11" fill="#8D877B">+1,500万</text>
+          <!-- bars -->
+          <rect x="99"  y="245" width="56" height="57"  rx="4" fill="#C43A28"/><rect x="99" y="245" width="56" height="6" fill="#C43A28"/>
+          <rect x="213" y="187" width="56" height="58"  rx="4" fill="#207A50"/><rect x="213" y="239" width="56" height="6" fill="#207A50"/>
+          <rect x="327" y="110" width="56" height="135" rx="4" fill="#207A50"/><rect x="327" y="239" width="56" height="6" fill="#207A50"/>
+          <rect x="441" y="73"  width="56" height="172" rx="4" fill="#207A50"/><rect x="441" y="239" width="56" height="6" fill="#207A50"/>
+          <rect x="555" y="54"  width="56" height="191" rx="4" fill="#207A50"/><rect x="555" y="239" width="56" height="6" fill="#207A50"/>
+          <!-- zero axis -->
+          <line x1="70" y1="245" x2="640" y2="245" stroke="#26251F" stroke-width="1.5"/>
+          <text x="62" y="249" text-anchor="end" font-size="11" fill="#8D877B">0</text>
+          <!-- value labels -->
+          <text x="127" y="319" text-anchor="middle" font-size="13" font-weight="700" fill="#C43A28">▲380万</text>
+          <text x="241" y="177" text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+390万</text>
+          <text x="355" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+900万</text>
+          <text x="469" y="63"  text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+1,150万</text>
+          <text x="583" y="44"  text-anchor="middle" font-size="13" font-weight="700" fill="#26251F">+1,150〜1,400万</text>
+          <!-- category labels -->
+          <text x="127" y="340" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">1年目</text>
+          <text x="127" y="356" text-anchor="middle" font-size="11" fill="#8D877B">2028・約13人</text>
+          <text x="241" y="340" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">2年目</text>
+          <text x="241" y="356" text-anchor="middle" font-size="11" fill="#8D877B">2029・約16人</text>
+          <text x="355" y="340" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">3年目</text>
+          <text x="355" y="356" text-anchor="middle" font-size="11" fill="#8D877B">2030・約18人</text>
+          <text x="469" y="340" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">4年目</text>
+          <text x="469" y="356" text-anchor="middle" font-size="11" fill="#8D877B">2031・約19人</text>
+          <text x="583" y="340" text-anchor="middle" font-size="12.5" fill="#26251F" font-weight="700">5年目</text>
+          <text x="583" y="356" text-anchor="middle" font-size="11" fill="#8D877B">2032・19〜20人</text>
+        </svg>
+      </div>
+      <div style="flex:0.8; padding-top:24px;">
+        <div style="font-size:14px; font-weight:700; line-height:2.0;">
+          段階受入を前提とした保守的なランプアップ想定。<span style="color:var(--green);">開設2年目に損益分岐を超える。</span>
+        </div>
+        <div style="font-size:13px; color:var(--ink2); line-height:1.95; margin-top:16px;">
+          1年目の資金流出(▲約380万円+開設前の採用・研修費用)は運転資金9,000万円で十分にカバー。<br>
+          入居ペースが想定より遅れた場合でも、2年強の全額赤字に耐えられる資金水準。
+        </div>
+        <div class="note-s">※月次収支モデル(P15)を利用者数別に展開した概算。入居ペースは圏域6病院との連携による紹介を前提</div>
+      </div>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>2年目に黒字化。運転資金には大幅な余裕がある</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>19 — 25</span></div>
+</section>
+
+<!-- 20. 社会的コスト削減 -->
+<section class="slide">
+  <div class="ghost">20</div>
+  <div class="inner">
+    <div class="kicker">IMPACT ─ 社会的インパクト</div>
+    <div class="title">年6,200万円の社会的コスト削減</div>
+    <div class="lead" style="margin-top:14px;">
+      入院からGHへの移行1人あたり:月26万円 × 12ヶ月 = 年309万円の公費削減。<br>
+      20名満室の場合:309万円 × 20人 = <b>年間6,180万円(約6,200万円)の公費削減</b>。
+    </div>
+    <div style="display:flex; gap:28px; margin-top:36px; padding:0 80px;">
+      <div class="card" style="padding:40px 16px 30px;"><div class="num" style="font-size:44px;">年309万円<span style="font-size:22px;">/人</span></div><div class="cap" style="margin-top:16px;">入院→GH移行による公費削減</div></div>
+      <div class="card" style="padding:40px 16px 30px;"><div class="num" style="font-size:44px;">年6,200万円</div><div class="cap" style="margin-top:16px;">20名分の年間公費削減額</div></div>
+    </div>
+    <div class="note" style="margin-top:28px; font-size:16px; line-height:1.9;">
+      投資額3.4億円に対して、毎年6,200万円の社会的リターンを生む。この事業への出資は、そのまま公費削減に直結する。
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>出資 = 公費削減。社会的リターンが明確</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>20 — 25</span></div>
+</section>
+
+<!-- 21. 波及効果 -->
+<section class="slide">
+  <div class="ghost">21</div>
+  <div class="inner">
+    <div class="kicker">IMPACT ─ 社会的インパクト</div>
+    <div class="title">波及効果 ── 経済的リターンを超えた価値</div>
+    <ul class="kv" style="margin-top:28px;">
+      <li><b class="k">個人</b>病院ではなく「自分の部屋」で暮らす。鍵のかかる個室。自炊もできる。人間の尊厳の回復</li>
+      <li><b class="k">地域</b>20名の生活消費が地域経済に還流。日用品・食材・交通・医療の地域内消費</li>
+      <li><b class="k">医療</b>病床の回転率向上。急性期治療を必要とする患者への病床再配分が可能に</li>
+      <li><b class="k">財政</b>年6,200万円の公費削減。削減された財源を他の福祉施策に転用可能</li>
+      <li><b class="k">雇用</b>常勤6名+パート2名+夜勤ローテ(最大5名/晩)の地域雇用を創出。福祉人材のキャリアパス提供</li>
+    </ul>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>経済的リターンを超えた、多層的な社会的価値を生む</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>21 — 25</span></div>
+</section>
+
+<!-- 22. 拡張計画 -->
+<section class="slide">
+  <div class="ghost">22</div>
+  <div class="inner">
+    <div class="kicker">GROWTH ─ 拡張戦略</div>
+    <div class="title">拡張計画 ── 日立から茨城全域へ</div>
+    <div class="lead" style="margin-top:10px; font-size:14.5px;">
+      第1号は日立市内での展開。成功モデルが確立されれば、日立障害福祉圏の他市(高萩市・北茨城市)、さらに茨城県内他圏域への横展開が可能。
+    </div>
+    <div style="font-size:14px; font-weight:700; margin-top:16px;">日立市 vs 高萩市 比較評価</div>
+    <div style="margin-top:8px;">
+      <table style="font-size:12px;">
+        <tr><th>評価軸</th><th class="r">重み</th><th class="r">日立市</th><th class="r">高萩市</th></tr>
+        <tr><td>市場規模</td><td class="r">25%</td><td class="r">12,944人 ◎</td><td class="r">~1,508人 △</td></tr>
+        <tr><td>GH需要見込</td><td class="r">20%</td><td class="r">454人 ◎</td><td class="r">77人 △</td></tr>
+        <tr><td>需給ギャップ</td><td class="r">20%</td><td class="r">供給不足確定 ◎</td><td class="r">需要未到達 ○</td></tr>
+        <tr><td>自治体の姿勢</td><td class="r">15%</td><td class="r">新規参入促進 ◎</td><td class="r">成果目標のみ ○</td></tr>
+        <tr><td>競合環境</td><td class="r">10%</td><td class="r">26事業所 ○</td><td class="r">少数 ◎</td></tr>
+        <tr><td>土地コスト</td><td class="r">10%</td><td class="r">3〜8万/坪 △</td><td class="r">1.5〜4万/坪 ◎</td></tr>
+        <tr class="total"><td>加重スコア</td><td class="r">100%</td><td class="r">4.30</td><td class="r">2.75</td></tr>
+      </table>
+    </div>
+    <div class="note" style="margin-top:14px; font-size:13.5px;">第1号は日立市。高萩市は第2号以降の候補</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>拡張モデルへの投資。成功すれば横展開できる</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>22 — 25</span></div>
+</section>
+
+<!-- 23. リスク管理 -->
+<section class="slide">
+  <div class="ghost">23</div>
+  <div class="inner">
+    <div class="kicker">RISK ─ リスク管理</div>
+    <div class="title">リスク管理と対策</div>
+    <div class="lead" style="margin-top:12px;">想定されるリスクとその対策。すべてのリスクに具体的な緩和策を準備。</div>
+    <div style="margin-top:20px;">
+      <table style="font-size:12.5px;">
+        <tr><th>リスク</th><th class="c" style="width:80px;">影響度</th><th>対策</th></tr>
+        <tr><td>入居者不足</td><td class="c" style="color:var(--red); font-weight:700;">高</td><td>供給不足(達成率112%)+年金内で払える家賃3万円で障壁を低減。段階受入+運転資金2年分</td></tr>
+        <tr><td>人材確保困難</td><td class="c">中</td><td>地域賃金水準。仮眠対応スタッフルーム完備で差別化</td></tr>
+        <tr><td>建設コスト増</td><td class="c">中</td><td>RC造は複数社見積・設計VEで抑制。予備費を計上</td></tr>
+        <tr><td>報酬改定</td><td class="c">中</td><td>実費収入が月間収入の30.8%。感度分析で耐性確認済み</td></tr>
+        <tr><td>回収長期化</td><td class="c">中</td><td>RC造・法定耐用47年の長期資産が残存。長期安定運営を前提とした事業設計</td></tr>
+        <tr><td>競合参入</td><td class="c">低</td><td>+115人の成長余地で20人を吸収。RC造×夜間体制の差別化で優位</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>主要リスクへの備えが具体的。想定外を最小化</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>23 — 25</span></div>
+</section>
+
+<!-- 24. 資金使途 -->
+<section class="slide">
+  <div class="ghost">24</div>
+  <div class="inner">
+    <div class="kicker">FUNDING ─ 資金計画</div>
+    <div class="title">資金使途 ── 必要初期費用3億3,770万円</div>
+    <div class="lead" style="margin-top:10px; font-size:14.5px;">本計画は「必要な初期費用の総額」として提示。資金調達の内訳は別途協議。</div>
+    <div style="margin-top:14px;">
+      <table style="font-size:12px;">
+        <tr><th>区分</th><th class="r">金額</th><th class="r">備考</th></tr>
+        <tr><td>土地取得(250坪)</td><td class="r">2,500万円</td><td class="r">坪単価10万円</td></tr>
+        <tr><td>建築費(1棟・延床約700㎡)</td><td class="r">1億9,500万円</td><td class="r">RC造3階建て・坪単価約92万円</td></tr>
+        <tr><td>付帯工事</td><td class="r">1,000万円</td><td class="r">外構・駐車場</td></tr>
+        <tr><td>消防設備</td><td class="r">1,000万円</td><td class="r">6項ロ対応</td></tr>
+        <tr><td>家具・備品(居室20室+大型キッチン厨房設備)</td><td class="r">500万円</td><td class="r">20名分調理対応</td></tr>
+        <tr><td style="padding-left:24px; color:var(--muted);">建設関連 小計</td><td class="r">2億4,500万円</td><td class="r"></td></tr>
+        <tr><td>開業費用</td><td class="r">270万円</td><td class="r">法人設立・車両等</td></tr>
+        <tr><td>運転資金(2年分)</td><td class="r">9,000万円</td><td class="r">BEP到達まで</td></tr>
+        <tr class="total"><td>必要初期費用 合計</td><td class="r">3億3,770万円</td><td class="r">約3.4億円</td></tr>
+      </table>
+    </div>
+    <div class="note-s" style="margin-top:12px;">調達は出資・金融機関借入・公的融資(独立行政法人福祉医療機構等)の組合せを想定し、詳細は協議の上決定。自治体の施設整備補助の活用可能性も精査する。</div>
+  </div>
+  <div class="sowhat"><span class="tag">だから何？</span>お金の使い道が透明。全額の使途が明確</div>
+  <div class="foot"><span>障害者グループホーム事業計画 ─ 日立市</span><span>24 — 25</span></div>
+</section>
+
+<!-- 25. まとめ -->
+<section class="slide green">
+  <div style="padding:60px 88px 0;">
+    <div class="kicker" style="color:var(--gold);">CONCLUSION</div>
+    <div class="serif" style="font-weight:900; font-size:38px; margin-top:14px;">だから今、出資する価値がある</div>
+    <div style="margin-top:36px;">
+      <div style="display:flex; gap:28px; align-items:baseline; padding:13px 0; border-bottom:1px solid rgba(245,241,230,.18);">
+        <div style="width:150px; color:var(--gold); font-weight:700; font-size:15px; letter-spacing:.08em; flex-shrink:0;">社会的意義</div>
+        <div style="font-size:15px; color:rgba(245,241,230,.92);">18万人の社会的入院。住む場所さえあれば退院できる人々に「家」を提供する</div>
+      </div>
+      <div style="display:flex; gap:28px; align-items:baseline; padding:13px 0; border-bottom:1px solid rgba(245,241,230,.18);">
+        <div style="width:150px; color:var(--gold); font-weight:700; font-size:15px; letter-spacing:.08em; flex-shrink:0;">公費削減</div>
+        <div style="font-size:15px; color:rgba(245,241,230,.92);">20名で年6,200万円の公費削減。出資がそのまま社会的リターンになる</div>
+      </div>
+      <div style="display:flex; gap:28px; align-items:baseline; padding:13px 0; border-bottom:1px solid rgba(245,241,230,.18);">
+        <div style="width:150px; color:var(--gold); font-weight:700; font-size:15px; letter-spacing:.08em; flex-shrink:0;">市場の裏付け</div>
+        <div style="font-size:15px; color:rgba(245,241,230,.92);">GH達成率112%。需要が供給を常に上回る日立市に、データに基づいて参入</div>
+      </div>
+      <div style="display:flex; gap:28px; align-items:baseline; padding:13px 0; border-bottom:1px solid rgba(245,241,230,.18);">
+        <div style="width:150px; color:var(--gold); font-weight:700; font-size:15px; letter-spacing:.08em; flex-shrink:0;">安全設計</div>
+        <div style="font-size:15px; color:rgba(245,241,230,.92);">段階受入。運転資金2年分。感度分析済み。RC造・法定耐用47年の長期資産が残る</div>
+      </div>
+      <div style="display:flex; gap:28px; align-items:baseline; padding:13px 0;">
+        <div style="width:150px; color:var(--gold); font-weight:700; font-size:15px; letter-spacing:.08em; flex-shrink:0;">実行体制</div>
+        <div style="font-size:15px; color:rgba(245,241,230,.92);">圏域6病院全院訪問済み。相談支援事業所との連携確立。行政が参入を促進</div>
+      </div>
+    </div>
+    <div style="margin-top:30px; border-top:2px solid var(--gold); padding-top:18px; font-size:13.5px; color:rgba(245,241,230,.85);">
+      <span style="color:var(--gold); font-weight:700; letter-spacing:.1em;">NEXT STEPS ─ </span>
+      ① 詳細財務モデル・算定根拠の開示　② 土地候補の現地確認　③ 行政・病院ヒアリングへの同席　④ 出資条件・スキームの協議
+    </div>
+  </div>
+  <div class="foot"><span>お問い合わせ・詳細資料のご請求はお気軽にご連絡ください</span><span>25 — 25</span></div>
+</section>
+
+</body>
+</html>
